@@ -14,7 +14,7 @@ Logo_7 = False
 logger = logging.getLogger(__name__)
 
 plc = snap7.logo.Logo()
-plc.connect("192.168.0.10", 0x1000, 0x2000)
+plc.connect("192.168.0.10", 0x0300, 0x0200)
 
 if plc.get_connected():
     logger.info("connected")

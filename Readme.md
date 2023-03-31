@@ -4,20 +4,29 @@ https://python-snap7.readthedocs.io/en/0.11/logo.html
 
 https://snap7.sourceforge.net/logo.html
 
-No Wireshark, você pode usar o recurso de filtro para encontrar pacotes relacionados ao TSAP Server que você está procurando. Aqui está um exemplo de como você pode fazer isso:
+Peimeiro teste de conexão:
 
-Inicie o Wireshark e selecione a interface de rede que você deseja usar para capturar o tráfego.
-
-Comece a capturar o tráfego clicando no botão "Start" ou pressionando a tecla F5.
-
-Aguarde alguns momentos enquanto o Wireshark captura pacotes na interface selecionada.
-
-Na barra de filtro na parte superior da tela, digite o seguinte filtro: "tcp.port == <porta_do_TSAP_Server>". Substitua "<porta_do_TSAP_Server>" pela porta TCP usada pelo TSAP Server que você está procurando. Se você não sabe qual porta é usada pelo TSAP Server, tente procurar na documentação ou nas configurações do servidor.
-
-Clique no botão "Apply" ou pressione Enter para aplicar o filtro.
-
-Aguarde enquanto o Wireshark filtra os pacotes e exibe apenas aqueles que correspondem ao seu filtro.
-
-Analise os pacotes filtrados para ver se você pode encontrar o endereço IP do TSAP Server ou outras informações úteis.
-
-Observe que o Wireshark pode capturar uma grande quantidade de tráfego de rede, portanto, é importante usar filtros específicos para reduzir a quantidade de pacotes que você precisa analisar. Além disso, certifique-se de que você está capturando o tráfego na rede correta e que o dispositivo que está executando o TSAP Server está ativo e se comunicando na rede enquanto você estiver capturando pacotes.
+INFO:snap7.logo:creating snap7 client
+INFO:snap7.logo:connecting to 192.168.0.10:102 tsap_snap7 768 tsap_logo 512
+INFO:__main__:connected
+INFO:snap7.logo:read, Bit address: V1024.0
+I1: 0
+write 0b10110001 to V10
+INFO:snap7.logo:Byte address: V10
+INFO:snap7.logo:read, Bit address: V10.0
+read V10.0 must be 1 - check: 1
+INFO:snap7.logo:read, Bit address: V10.3
+read V10.3 must be 0 - check: 0
+INFO:snap7.logo:read, Bit address: V10.7
+read V10.7 must be 1 - check: 1
+write 480 analog value to VW20
+INFO:snap7.logo:Word address: VW20
+INFO:snap7.logo:Word address: VW20
+trigger V10.2
+INFO:snap7.logo:read, Bit address: V10.2
+INFO:snap7.logo:read, Bit address: V10.2
+INFO:snap7.logo:read, Bit address: V10.2
+INFO:snap7.logo:disconnecting snap7 client
+INFO:__main__:Disconnected
+INFO:snap7.logo:destroying snap7 client
+INFO:snap7.logo:destroying snap7 client
